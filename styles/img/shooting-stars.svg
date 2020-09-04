@@ -1,0 +1,20 @@
+<svg width="245" height="185" viewBox="0 0 245 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="shooting-stars">
+<g id="shooting">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M2.55325 100.924C2.97856 100.924 3.45112 101.018 3.82918 101.255C4.20724 101.491 49.196 76.0256 49.4322 76.4036C49.7158 76.8288 5.19965 103.05 5.19965 103.569C5.19965 105.034 4.01822 106.168 2.60051 106.168C1.1828 106.168 0.00137033 105.034 0.00137033 103.569C-0.0458867 102.105 1.13554 100.924 2.55325 100.924Z" fill="#FFFFCC"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M2.55323 105.554C3.68743 105.554 4.58533 104.609 4.58533 103.522C4.58533 102.436 3.68743 101.491 2.55323 101.491C1.41903 101.491 0.521118 102.388 0.521118 103.522C0.521118 104.656 1.46629 105.554 2.55323 105.554Z" fill="#FFFF66"/>
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M2.41143 105.081C3.16752 105.081 3.78186 104.467 3.78186 103.711C3.78186 102.955 3.16752 102.341 2.41143 102.341C1.65534 102.341 1.04102 102.955 1.04102 103.711C1.04102 104.467 1.65534 105.081 2.41143 105.081Z" fill="#FFCC00"/>
+<path id="Vector_4" fill-rule="evenodd" clip-rule="evenodd" d="M58.4112 70.923C58.5058 70.8758 127.785 30.6233 127.879 30.765C127.974 30.9068 59.0256 71.6317 58.8838 71.7262C57.9387 72.2931 57.5606 71.4427 58.4112 70.923Z" fill="#FFFFCC"/>
+</g>
+<g id="shooting2">
+<path id="vector" d="M234.337 28.0893L24.7631 152.989" stroke="url(#paint0_linear)" stroke-width="2"/>
+<circle id="Ellipse 3" cx="25.0409" cy="153.222" r="3" transform="rotate(8.07454 25.0409 153.222)" fill="#FFE16A"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="124.776" y1="159.875" x2="134.324" y2="21.2035" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFECA2"/>
+<stop offset="1" stop-color="#FFECA1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
