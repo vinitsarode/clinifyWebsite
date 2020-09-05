@@ -434,7 +434,7 @@ header nav.navbar .navbar-nav .nav-link {
       grid-template-rows: 1fr 1fr;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
-      grid-template-areas: "logo join-us" "logo brand";
+      grid-template-areas: "logo join-us" "logo brand";
   width: 60%;
 }
 
@@ -542,7 +542,7 @@ header nav.navbar .navbar-nav .nav-link {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "title title" "author author" "description description" "hr hr" "event-date event-date" "month time";
+      grid-template-areas: "title title" "author author" "description description" "hr hr" "event-date event-date" "month time";
 }
 
 #events .event-card .ec-body:hover .overlay {
