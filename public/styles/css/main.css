@@ -134,7 +134,7 @@ header nav.navbar .navbar-nav .nav-link {
 #landing-page .shooting-stars {
   position: absolute;
   right: 20;
-  top: 310;
+  top: 140px;
 }
 
 #landing-page .rocket-takeoff {
@@ -391,7 +391,7 @@ header nav.navbar .navbar-nav .nav-link {
           align-items: center;
 }
 
-#community .community-box .row .picture-column svg {
+#community .community-box .row .picture-column .img-fluid {
   display: block;
   margin: auto;
   width: 80%;
