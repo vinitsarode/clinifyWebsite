@@ -391,7 +391,7 @@ header nav.navbar .navbar-nav .nav-link {
           align-items: center;
 }
 
-#community .community-box .row .picture-column .img-fluid {
+#community .community-box .row .picture-column svg {
   display: block;
   margin: auto;
   width: 80%;
