@@ -147,8 +147,8 @@ header {
 
 	.shooting-stars {
 		position: absolute;
-		right: 20;
-		top: 140px;
+		right: 20px;
+		top: 30%;
 	}
 
 	.rocket-takeoff {
@@ -336,7 +336,7 @@ header {
 				border-right: 1px solid #e0e0e0;
 				display: flex;
 				align-items: center;
-				svg {
+				.community-illustration {
 					display: block;
 					margin: auto;
 					width: 80%;

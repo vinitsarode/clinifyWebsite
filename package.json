@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vinitsarode/clinifyWebsite#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lazysizes": "^5.2.2"
   }
 }
