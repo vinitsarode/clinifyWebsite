@@ -45,6 +45,15 @@ p {
 	}
 }
 
+.layer{
+	padding: 40px 0;
+	@media (min-width:768px){
+		padding: 100px 0;
+	}
+}
+
+// ===============================================
+
 header {
 	nav.navbar {
 		position: fixed;
@@ -153,6 +162,7 @@ header {
 
 	.rocket-takeoff {
 		position: absolute;
+		display: none;
 		top: 290;
 		left: 40;
 		#flame {
@@ -174,27 +184,41 @@ header {
 
 	.container {
 		height: 100%;
-		@include flexcenter();
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
 
 		position: relative;
 		z-index: 2;
 
 		color: #f0f0f0;
-		h1 {
+		.hero-brand {
 			font-size: 64px;
 			font-weight: 400;
 			@include brand-color();
-			margin: 0;
+			margin-bottom: 2rem;
 		}
-		h3 {
+		.hero-subheader {
 			font-weight: 500;
-			font-size: 30px;
+			font-size: 20px;
 			line-height: 1.3;
-			width: 350px;
-			text-align: center;
-			margin: 3rem 0;
+			letter-spacing: 0.5px;
+			font-family: 'raleway', sans-serif;
+			margin-bottom: 0.8rem;
+			color: rgb(255, 213, 200);
 		}
-		.btn-primary {
+
+		.hero-text{
+			color: #e5e5e5;
+			font-size: 35px;
+			font-weight: 600;
+			margin: 0;
+			letter-spacing: 1px;
+			font-family: 'raleway', sans-serif;
+		}
+
+		.cta-btn {
 			font-family: "raleway", sans-serif;
 			font-weight: 700;
 			font-size: 20px;
@@ -202,6 +226,7 @@ header {
 			background: #fff;
 			color: #007d75;
 			border: none;
+			margin-top: 3rem;
 		}
 	}
 }
@@ -246,26 +271,6 @@ header {
 	}
 }
 
-// .star {
-//     position: absolute;
-//     right: 0;
-//     bottom: 0;
-//     width: 3px;
-//     height: 3px;
-//     background-color: #ffcc00;
-//     animation: shooting 5s linear infinite;
-//     // animation-delay: 3s;
-
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       width: 100px;
-//       height: 3px;
-//       right: 3px;
-//       top: 0;
-//       background: linear-gradient(to right, rgba(black, 0) 0%,rgba(white, .4) 100%);
-//     }
-//   }
 
 .shooting-star {
 	width: 5px;
@@ -273,8 +278,6 @@ header {
 	border-top-left-radius: 50%;
 	border-top-right-radius: 50%;
 	position: absolute;
-	//   bottom: 0;
-	//   left: 0;
 	background: linear-gradient(to top, rgba(255, 255, 255, 0), #ffeda3);
 	animation: animshootingstar 7s linear infinite;
 }
@@ -291,6 +294,11 @@ header {
 		height: 800px;
 	}
 }
+
+
+
+
+
 
 // ==========================================================================
 // Community CSS
@@ -311,25 +319,27 @@ header {
 	z-index: 10;
 	box-shadow: 0px -2px 9px rgba(0, 0, 0, 0.2);
 
-	.section-headline {
-		color: #3e4f5c;
-		font-weight: 600;
-		text-align: center;
-		width: 90%;
-		margin: 0 auto 0.8rem;
-	}
-
-	.subtitle {
-		color: #777;
-		text-align: center;
-		margin-bottom: 40px;
-	}
+	
 
 	.community-box {
 		padding: 40px 0 50px;
 		border-radius: 50px;
 		background: white;
 		box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.2);
+
+		.section-headline {
+			color: #3e4f5c;
+			font-weight: 600;
+			text-align: center;
+			width: 90%;
+			margin: 0 auto 0.8rem;
+		}
+	
+		.subtitle {
+			color: #777;
+			text-align: center;
+			margin-bottom: 40px;
+		}
 
 		.row {
 			.picture-column {
@@ -417,6 +427,69 @@ header {
 		}
 	}
 }
+
+// ==================================
+// Feature box CSS 
+// ==================================
+
+
+
+
+.feature-box{
+	border-radius: 1rem;
+	background-color: white;
+	padding: 40px 0;
+	box-shadow: 2px 4px 30px rgba(0,0,0,0.1);
+	.section-headline {
+		color: #3e4f5c;
+		font-weight: 600;
+		text-align: center;
+		
+		font-size: 1.8rem;
+		margin: 0 auto 2rem;
+		@media (min-width:768px){
+			font-size: 2rem;
+			width: 90%;
+			margin-bottom: 3rem;
+		}
+	}
+
+	.subtitle {
+		color: #777;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.img-column{
+		@media (min-width: 768px){
+			border-right: 1px solid #e0e0e0;
+		}
+		
+		.img-wrapper{
+			width: 80%;
+			margin: auto;
+		}
+	}
+
+	.text-column{
+		padding: 30px 100px;
+
+		.section-text{
+			color: #6c757d;
+			font-size: 18px;
+			line-height: 2;
+		}
+	}
+	
+}
+
+
+
+#job-summary{
+	background-color: #f5f5f5;
+}
+
+
 
 // ===============================================================================
 // Events
@@ -547,6 +620,9 @@ header {
 				font-size: 64px;
 				color: ivory;
 				grid-area: event-date;
+				span{
+					font-size: 28px;
+				}
 			}
 			.month {
 				grid-area: month;
@@ -955,4 +1031,127 @@ footer {
 			}
 		}
 	}
+}
+
+
+
+// =========================================
+// Jobs Page CSS
+// =========================================
+
+
+#jobs-page{
+	background-color: #f5f7fa;
+	font-family: 'poppins', sans-serif;
+	.job-card-wrapper{
+		margin-bottom: 2rem;
+	}
+	.job-card{
+		display: grid;
+		padding: 1rem;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: white;
+		grid-template-areas: "logo name"
+		"logo locations"
+		"title title"
+		"type applybtn";
+		column-gap: 1rem;
+		height: 100%;
+
+		.company-logo{
+			height: 72px;
+			width: 72px;
+			object-fit: contain;
+			background-color: #f5f7fa;
+			grid-area: logo;
+			padding: 10px;
+			border-radius: 5px;
+			align-self: center;
+			
+		}
+		.company-name{
+			grid-area: name;
+			font-size: 14px;
+			color: #34363f;
+		}
+		.locations{
+			grid-area: locations;
+			padding-left: 1rem;
+			position: relative;
+			font-size: 12px;
+			color: #999;
+			&::before{
+				position: absolute;
+				left: 0;
+				top: 1px;
+				font-family: "Font Awesome 5 Free";
+				content: "\f3c5";
+				font-weight: 900;
+				// color: #999;
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+			}
+		}
+		.job-title{
+			grid-area: title;
+			font-size: 16px;
+			font-weight: 500;
+			padding: 1rem 0 1.2rem;
+		}
+		.job-type{
+			grid-area: type;
+			border: 2px solid transparent;
+			border-radius: 5px;
+			font-size: 12px;
+			color: #333;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 25px;
+			align-self: center;
+			padding: 0 8px;
+			letter-spacing: 0.3px;
+		}
+		.apply-now-btn{
+			grid-area: applybtn;
+			border-radius: 5px;
+			background: #007bff;
+			color: white;
+			border: none;
+			padding: 5px 10px;
+			font-size: 14px;
+			width: 150px;
+			justify-self: flex-end;
+		}
+	}
+
+	.job-card.internship{
+		.job-type{
+			// border-color: #27db69;
+			background-color: #ddd;	
+		}
+	}
+	.job-card.fulltime{
+		.job-type{
+			border-color: #2eb7f2;
+			background-color: #38bcf5;	
+		}
+	}
+	.job-card.parttime{
+		.job-type{
+			border-color: #0ebe4f;
+			background-color: #30e371;	
+		}
+	}
+	.job-card.workfromhome{
+		.job-type{
+			border-color: #0ebe4f;
+			background-color: #30e371;	
+		}
+	}
+
 }
