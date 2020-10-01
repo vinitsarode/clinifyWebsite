@@ -1,5 +1,4 @@
 var axios = require('axios');
-const { response } = require('express');
 
 const getJob = async () => {
     const response = await axios.post('https://bsm8fqj8ug.execute-api.ap-south-1.amazonaws.com/v3/job/external-search', {
