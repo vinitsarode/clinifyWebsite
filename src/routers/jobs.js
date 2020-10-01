@@ -7,7 +7,20 @@ const router = new express.Router()
 router.get('/jobs', async (req, res) => {
     try {
         
-        res.render('main', { title: 'Main', noheader: true, main: true, seating: admin.seating, tables: admin.tables, shelves: admin.shelves, storage: admin.storage, products })
+        const jobs = await getJob()
+        console.log(jobs)
+        for(var i=0; i< 10;i++){
+            var temp =''
+            console.log(jobs.items[i].locations)
+            for(var j=0; j<jobs.items[i].locations.length && j!=4; j++){
+                if(!temp.includes(jobs.items[i].locations[j].cityName)){
+                    temp = temp + jobs.items[i].locations[j].cityName + '. '
+                }
+            }
+            jobs.items[i].locations = temp
+        }
+        
+        res.render('jobs', { title: 'Jobs', jobs:jobs.items})
     } catch (e) {
         res.status(404).send()
     }
