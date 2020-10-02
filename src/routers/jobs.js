@@ -6,7 +6,7 @@ const router = new express.Router()
 //Main Page
 router.get('/jobs', async (req, res) => {
     try {
-        const jobs = await getJob(req.body.title, req.body.jobType, req.body.location)
+        const jobs = await getJob()
         console.log(jobs)
         for(var i=0; i< 10;i++){
             var temp =''
@@ -25,6 +25,37 @@ router.get('/jobs', async (req, res) => {
     }
 
 })
+
+
+router.post('/getjobs', async (req, res) => {
+    try {
+        console.log(req.body.title, req.body.type, req.body.location)
+        const jobs = await getJob(req.body.title, req.body.type, req.body.location, 1, 10)
+        console.log(jobs)
+        if(jobs.items){
+            for(var i=0; i< 10;i++){
+                var temp =''
+                console.log(jobs.items[i].locations)
+                for(var j=0; j<jobs.items[i].locations.length && j!=4; j++){
+                    if(!temp.includes(jobs.items[i].locations[j].cityName)){
+                        temp = temp + jobs.items[i].locations[j].cityName + '. '
+                    }
+                }
+                jobs.items[i].locations = temp
+            }
+
+            res.send(jobs.items)
+        }else{
+            res.send({error:"No results"})
+        }
+        
+    } catch (e) {
+        res.status(404).send()
+    }
+
+})
+
+
 
 
 

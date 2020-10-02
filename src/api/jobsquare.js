@@ -32,19 +32,18 @@ const getJob = async (title, jobType, location, pageNumber, pageSize) => {
             pageNumber,
             pageSize
         },
-        "filters": [
-            
-            // titlefilter,
-            // jobtypefilter,
-            //locationfilter
+        "filters": [   
+            titlefilter,
+            jobtypefilter,
+            locationfilter
             // {
             //     "field": "company",
             //     "value": "{WebBee Global}" //{keyword}
             // },
-            {
-                "field":"location",
-                "Value":"{Maharashtra}"
-                }
+            // {
+            //     "field":"location",
+            //     "Value":"{Maharashtra}"
+            // }
             
         ]
     }
@@ -54,12 +53,12 @@ const getJob = async (title, jobType, location, pageNumber, pageSize) => {
     return response.data
 }
 
-getJob("front end", "Full Time", "maharashtra", 1, 10).then((data) => {
-    console.log(data)
-    console.log(data.items[9].locations)
-}).catch((e) => {
-    //console.log(e)
-})
+// getJob("front end", "Full Time", "maharashtra", 1, 10).then((data) => {
+//     console.log(data)
+//     console.log(data.items[9].locations)
+// }).catch((e) => {
+//     //console.log(e)
+// })
 
 module.exports = getJob
 
