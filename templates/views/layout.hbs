@@ -37,9 +37,13 @@
 		rel="stylesheet" />
 </head>
 <body>
-
+	{{#if headerMain}}
 	{{> header}}
-	{{> header-secondary}}
+	{{/if}}
+	{{#if headerSec}}
+	{{> headerSecondary}}
+	{{/if}}
+	
      {{{body}}}
 	{{> footer}} 
 </body>

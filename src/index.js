@@ -26,7 +26,7 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicDirectoryPath))
 
 app.get('/', (req, res) => {
-    res.render('index', {title: 'Main Page'})
+    res.render('index', {title: 'Main Page', headerMain:true})
 })
 
 app.get('/mentors', (req, res) => {

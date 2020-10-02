@@ -20,7 +20,6 @@ router.get('/jobs', async (req, res) => {
         jobs.items = jobs.items.concat(jobs5.items)
         for(var i=0; i< jobs.items.length;i++){
             var temp =''
-            console.log(jobs.items[i].locations)
             for(var j=0; j<jobs.items[i].locations.length && j!=4; j++){
                 if(!temp.includes(jobs.items[i].locations[j].cityName)){
                     temp = temp + jobs.items[i].locations[j].cityName + '. '
@@ -30,7 +29,7 @@ router.get('/jobs', async (req, res) => {
         }
         jobs.items = shuffle(jobs.items)
         
-        res.render('jobs', { title: 'Jobs', jobs:jobs.items})
+        res.render('jobs', { title: 'Jobs', jobs:jobs.items, headerSec:true})
     } catch (e) {
         res.status(404).send()
     }
