@@ -26,6 +26,7 @@
                 <label for="m-location">Location</label>
                 <input type="text" class="form-control" id="m-location">
             </div>
+            <button class="btn btn-dark m-search-filter-modal">Search</button>
         </form>
       </div>
     </div>
@@ -37,12 +38,15 @@
     <div class="container">
         <div class="filter-wrapper">
             <div class="web-filter">
-                <input class="form-control border-left-curved" type="text" placeholder="Job Title">
-                <select class="form-control side-borders" name="" id="">
-                    <option value="" selected>Type</option>
-                    <option value="">internship</option>
+                <input class="form-control border-left-curved job-title-input" type="text" placeholder="Job Title">
+                <select class="form-control side-borders job-type-select" name="" id="">
+                    <option value="">Job type</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Full Time">Full time</option>
+                    <option value="Part Time">Part time</option>
+                    <option value="Work From Home">Work from home</option>
                 </select>
-                <input class="form-control" placeholder="Location" type="text">
+                <input class="form-control job-location-input" placeholder="Location" type="text">
                 <button class="btn search-filter-btn">Search</button>
             </div>
             <div class="mobile-filter">

@@ -1223,6 +1223,12 @@ footer .credits a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  #jobs-page .filter-wrapper {
+    margin-top: 7rem;
+  }
+}
+
 #jobs-page .job-card-wrapper {
   margin-bottom: 2rem;
 }
@@ -1389,5 +1395,62 @@ footer .credits a:hover {
 #jobs-page .job-card.workfromhome .job-type {
   border-color: #0ebe4f;
   background-color: #30e371;
+}
+
+#mentors-page {
+  background-color: #f5f7fa;
+  font-family: 'poppins', sans-serif;
+}
+
+#mentors-page .mentor-card-wrapper {
+  margin-bottom: 3rem;
+}
+
+#mentors-page .mentor-card {
+  display: -ms-grid;
+  display: grid;
+  padding: 1.2rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  height: 100%;
+  text-align: center;
+}
+
+#mentors-page .mentor-card .mentor-img {
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  margin: auto;
+}
+
+#mentors-page .mentor-card .mentor-name {
+  padding: 10px 0;
+}
+
+#mentors-page .mentor-card .mentor-college {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#mentors-page .mentor-card .mentor-cta-btn {
+  margin: 10px 0;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-decoration: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 /*# sourceMappingURL=main.css.map */

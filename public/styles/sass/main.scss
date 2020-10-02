@@ -1107,6 +1107,9 @@ footer {
 				display: flex;
 			}
 		}
+		@media(max-width: 600px){
+			margin-top: 7rem;
+		}
 	}
 
 	.job-card-wrapper{
@@ -1218,7 +1221,6 @@ footer {
 
 	.job-card.internship{
 		.job-type{
-			// border-color: #27db69;
 			background-color: #e5e5e5;	
 		}
 	}
@@ -1241,4 +1243,58 @@ footer {
 		}
 	}
 
+}
+
+
+// ===================================================
+// Mentors Page CSS
+// ===================================================
+
+#mentors-page{
+	background-color: #f5f7fa;
+	font-family: 'poppins', sans-serif;
+	.mentor-card-wrapper{
+		margin-bottom: 3rem;
+	}
+	.mentor-card{
+		display: grid;
+		padding: 1.2rem;
+		border-radius: 10px;
+		box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		background-color: white;
+		height: 100%;
+		text-align: center;
+		
+		.mentor-img{
+			border-radius: 50%;
+			width: 175px;
+			height: 175px;
+			margin: auto;
+		}
+
+		.mentor-name{
+			padding: 10px 0;
+		}
+
+		.mentor-college{
+			font-size: 20px;
+			font-weight: 600;
+		}
+
+		.mentor-cta-btn{
+			margin: 10px 0;
+			border-radius: 5px;
+			background: #007bff;
+			color: white;
+			border: none;
+			padding: 5px 10px;
+			text-align: center;
+			height: fit-content;
+			text-decoration: none;
+			align-self: center;
+			justify-self: center;
+		}
+		
+	}
 }
