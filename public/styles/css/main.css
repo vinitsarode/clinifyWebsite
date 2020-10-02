@@ -1229,6 +1229,12 @@ footer .credits a:hover {
   }
 }
 
+#jobs-page .no-results-wrapper .noresults {
+  max-width: 400px;
+  display: block;
+  margin: auto;
+}
+
 #jobs-page .job-card-wrapper {
   margin-bottom: 2rem;
 }
@@ -1427,12 +1433,16 @@ footer .credits a:hover {
 }
 
 #mentors-page .mentor-card .mentor-name {
-  padding: 10px 0;
+  padding: 1rem 0;
 }
 
 #mentors-page .mentor-card .mentor-college {
   font-size: 20px;
   font-weight: 600;
+}
+
+#mentors-page .mentor-card .mentor-branch {
+  margin-bottom: 2rem;
 }
 
 #mentors-page .mentor-card .mentor-cta-btn {
