@@ -29,6 +29,10 @@ app.get('/', (req, res) => {
     res.render('index', {title: 'Main Page'})
 })
 
+app.get('/mentors', (req, res) => {
+    res.render('mentors', {title: 'Mentors'})
+})
+
 
 app.listen(port, () => {
     console.log('Server is up on port ' + port)

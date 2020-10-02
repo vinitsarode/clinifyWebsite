@@ -1039,31 +1039,107 @@ footer {
 // Jobs Page CSS
 // =========================================
 
+#job-filter-modal{
+	font-family: 'poppins', sans-serif;
+	.modal-content{
+		border: none;
+		background-color: #f5f7fa;
+	}
+	.modal-header{
+		border-bottom: none;
+	}
+	.modal-body{
+		padding: 1rem 2rem;
+		.form-control{
+			border: none;
+		}
+	}
+}
 
 #jobs-page{
+	$firadius: 10px;
+	$cta-btn: #435fc7;
+
 	background-color: #f5f7fa;
 	font-family: 'poppins', sans-serif;
+
+
+	.filter-wrapper{
+		margin-bottom: 4rem;
+		.mobile-filter{
+			display: flex;
+			justify-content: flex-end;
+		}
+		.web-filter{
+			display: none;
+			.form-control{
+				height: 3.5rem;
+				padding: 0.5rem 1rem;
+				border-radius: 0;
+				border: none;
+				&:focus{
+					box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
+					transform: translate(0px, 0px);
+				}
+			}
+			.border-left-curved{
+				border-top-left-radius: $firadius;
+				border-bottom-left-radius: $firadius;
+			}
+			.side-borders{
+				border-left: 1px solid #eee;
+				border-right: 1px solid #eee;
+			}
+			.search-filter-btn{
+				border-radius: 0;
+				width: 15%;
+				border-top-right-radius: $firadius;
+				border-bottom-right-radius: $firadius;
+				background-color: $cta-btn;
+				color: white;
+			}
+		}
+		@media(min-width: 600px){
+			.mobile-filter{
+				display: none;
+			}
+			.web-filter{
+				display: flex;
+			}
+		}
+	}
+
 	.job-card-wrapper{
 		margin-bottom: 2rem;
 	}
 	.job-card{
 		display: grid;
-		padding: 1rem;
+		padding: 1.2rem;
 		border-radius: 10px;
+		box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 		overflow: hidden;
 		background-color: white;
-		grid-template-areas: "logo name"
-		"logo locations"
-		"title title"
-		"type applybtn";
-		column-gap: 1rem;
 		height: 100%;
+
+		.top-grid{
+			display: grid;
+			grid-template-columns: 72px auto;
+			grid-template-areas: "logo name"
+			"logo locations";
+			column-gap: 1rem;
+		}
+
+		.bottom-grid{
+			display: grid;
+			grid-template-areas: "title title"
+			"type applybtn";
+		}
 
 		.company-logo{
 			height: 72px;
 			width: 72px;
 			object-fit: contain;
-			background-color: #f5f7fa;
+			background-color: white;
 			grid-area: logo;
 			padding: 10px;
 			border-radius: 5px;
@@ -1074,6 +1150,7 @@ footer {
 			grid-area: name;
 			font-size: 14px;
 			color: #34363f;
+			align-self: center;
 		}
 		.locations{
 			grid-area: locations;
@@ -1081,6 +1158,7 @@ footer {
 			position: relative;
 			font-size: 12px;
 			color: #999;
+			align-self: center;
 			&::before{
 				position: absolute;
 				left: 0;
@@ -1099,8 +1177,10 @@ footer {
 		.job-title{
 			grid-area: title;
 			font-size: 16px;
-			font-weight: 500;
-			padding: 1rem 0 1.2rem;
+			color: #3e3e4b;
+			font-weight: 600;
+			padding: 2rem 0;
+			text-transform: capitalize;
 		}
 		.job-type{
 			grid-area: type;
@@ -1112,6 +1192,7 @@ footer {
 			align-items: center;
 			justify-content: center;
 			height: 25px;
+			width: fit-content;
 			align-self: center;
 			padding: 0 8px;
 			letter-spacing: 0.3px;
@@ -1119,12 +1200,18 @@ footer {
 		.apply-now-btn{
 			grid-area: applybtn;
 			border-radius: 5px;
-			background: #007bff;
+			background: $cta-btn;
 			color: white;
 			border: none;
 			padding: 5px 10px;
-			font-size: 14px;
-			width: 150px;
+			font-size: 13px;
+			font-weight: 400;
+			width: 110px;
+			text-align: center;
+
+			height: fit-content;
+			text-decoration: none;
+			align-self: center;
 			justify-self: flex-end;
 		}
 	}
@@ -1132,7 +1219,7 @@ footer {
 	.job-card.internship{
 		.job-type{
 			// border-color: #27db69;
-			background-color: #ddd;	
+			background-color: #e5e5e5;	
 		}
 	}
 	.job-card.fulltime{

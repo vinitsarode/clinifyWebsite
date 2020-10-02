@@ -1,53 +1,76 @@
+<div class="modal fade" id="job-filter-modal" tabindex="-1" aria-labelledby="job-filter-modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job-filter-modalLabel">Filter Jobs</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+            <div class="form-group">
+                <label for="m-job-title">Job Title</label>
+                <input type="text" class="form-control" id="m-job-title">
+            </div>
+            <div class="form-group">
+                <label for="m-type-dropdown">Job type</label>
+                <select class="form-control" name="" id="m-type-dropdown">
+                    <option value="">Full time</option>
+                    <option value="">Part time</option>
+                    <option value="">internship</option>
+                    <option value="">Work from home</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="m-location">Location</label>
+                <input type="text" class="form-control" id="m-location">
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <section id="jobs-page" class="layer">
     <div class="container">
+        <div class="filter-wrapper">
+            <div class="web-filter">
+                <input class="form-control border-left-curved" type="text" placeholder="Job Title">
+                <select class="form-control side-borders" name="" id="">
+                    <option value="" selected>Type</option>
+                    <option value="">internship</option>
+                </select>
+                <input class="form-control" placeholder="Location" type="text">
+                <button class="btn search-filter-btn">Search</button>
+            </div>
+            <div class="mobile-filter">
+                <button class="btn filters-btn" data-toggle="modal" data-target="#job-filter-modal"><i class="fas fa-filter"></i> Filter Jobs</button>
+            </div>
+        </div>
         <div class="row">
             {{#each jobs}}
             <div class="col-md-6 col-lg-4 job-card-wrapper">
                 <div class="job-card internship">
-                    {{#unless this.companyLogo}}
-                    <img src="/assets/logos/company.svg" alt="" class="img-fluid company-logo">
-                    {{/unless}}
-                    {{#if this.companyLogo}}
-                    <img src="{{this.companyLogo}}" alt="" class="img-fluid company-logo">
-                    {{/if}}
-                    <div class="company-name">{{this.companyName}}</div>
-                    <div class="locations">{{this.locations}}</div>
-                    <div class="job-title">{{this.title}}</div>
-                    <span class="job-type ">{{this.jobType}}</span>
-                    <a class="apply-now-btn" href="{{this.jobUrl}}">Apply now</a>
+                    <div class="top-grid">
+                        {{#unless this.companyLogo}}
+                        <img src="/assets/logos/company.svg" alt="" class="img-fluid company-logo">
+                        {{/unless}}
+                        {{#if this.companyLogo}}
+                        <img src="{{this.companyLogo}}" alt="" class="img-fluid company-logo">
+                        {{/if}}
+                        <div class="company-name">{{this.companyName}}</div>
+                        <div class="locations">{{this.locations}}</div>
+                    </div>
+                    <div class="bottom-grid">
+                        <div class="job-title">{{this.title}}</div>
+                        <span class="job-type">{{this.jobType}}</span>
+                        <a class="btn apply-now-btn" href="{{this.jobUrl}}">Apply now</a>
+                    </div>
                 </div>
             </div>
             {{/each}}
-            <div class="col-md-6 col-lg-4 job-card-wrapper">
-                <div class="job-card internship">
-                    <img src="/assets/logos/company.svg" alt="" class="img-fluid company-logo">
-                    <div class="company-name">Paradise recruitment consultant services</div>
-                    <div class="locations">Thane, Raigad, Nashik, Aurangabad, Jalgaon, Beed</div>
-                    <div class="job-title">Android Developer</div>
-                    <span class="job-type ">Internship</span>
-                    <button class="apply-now-btn">Apply now</button>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 job-card-wrapper">
-                <div class="job-card fulltime">
-                    <img src="/assets/logos/company.svg" alt="" class="img-fluid company-logo">
-                    <div class="company-name">Paradise recruitment consultant</div>
-                    <div class="locations">Thane, Raigad</div>
-                    <div class="job-title">Executive Assitant/Personal Assitant</div>
-                    <div class="job-type">Full time</div>
-                    <button class="apply-now-btn">Apply now</button>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 job-card-wrapper">
-                <div class="job-card parttime">
-                    <img src="/assets/logos/company.svg" alt="" class="img-fluid company-logo">
-                    <div class="company-name">Paradise recruitment consultant solutions</div>
-                    <div class="locations">Thane</div>
-                    <div class="job-title">UI/UX Designer</div>
-                    <div class="job-type">Internship</div>
-                    <button class="apply-now-btn">Apply now</button>
-                </div>
-            </div>
         </div>
     </div>
 </section>
