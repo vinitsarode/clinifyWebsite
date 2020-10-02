@@ -36,9 +36,6 @@ router.get('/jobs', async (req, res) => {
 
 })
 
-
-
-
 router.post('/getjobs', async (req, res) => {
     try {
         console.log(req.body.title, req.body.type, req.body.location)
