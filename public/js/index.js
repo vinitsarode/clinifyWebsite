@@ -27,7 +27,7 @@ $(document).on("click", "#jobs-page .web-filter .search-filter-btn", function(){
             <img src="/assets/illustrations/noresults.svg" class="img-fluid noresults" alt="no results found">
           </div>`
             var output = Mustache.render(template);
-            $("#jobs-page .job-cards").html(output);
+            $("#jobs-page .job-page-body").html(output);
         }else{
             renderJobs(response.data)
         }
@@ -54,7 +54,8 @@ const renderJobs = (jobs)=>{
     view = {
         jobs
     }
-    template = `{{#jobs}}
+    template = `<div class="row job-cards">
+    {{#jobs}}
     <div class="col-md-6 col-lg-4 job-card-wrapper">
         <div class="job-card internship">
             <div class="top-grid">  
@@ -70,7 +71,8 @@ const renderJobs = (jobs)=>{
             </div>
         </div>
     </div>
-    {{/jobs}}`
+    {{/jobs}}
+    </div> `
     var output = Mustache.render(template, view);
-    $("#jobs-page .job-cards").html(output);
+    $("#jobs-page .job-page-body").html(output);
 }

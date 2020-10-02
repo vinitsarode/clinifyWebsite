@@ -56,27 +56,27 @@
         <div class="job-page-body">
             <div class="row job-cards">
             {{#each jobs}}
-            <div class="col-md-6 col-lg-4 job-card-wrapper">
-                <div class="job-card internship">
-                    <div class="top-grid">
-                        {{#unless this.companyLogo}}
-                        <img src="/assets/logos/company.svg" alt="" class="img-fluid company-logo">
-                        {{/unless}}
-                        {{#if this.companyLogo}}
-                        <img src="{{this.companyLogo}}" alt="" class="img-fluid company-logo">
-                        {{/if}}
-                        <div class="company-name">{{this.companyName}}</div>
-                        <div class="locations">{{this.locations}}</div>
-                    </div>
-                    <div class="bottom-grid">
-                        <div class="job-title">{{this.title}}</div>
-                        <span class="job-type">{{this.jobType}}</span>
-                        <a class="btn apply-now-btn" href="{{this.jobUrl}}">Apply now</a>
+                <div class="col-md-6 col-lg-4 job-card-wrapper">
+                    <div class="job-card internship">
+                        <div class="top-grid">
+                            {{#unless this.companyLogo}}
+                            <img src="/assets/logos/company.svg" alt="" class="img-fluid company-logo">
+                            {{/unless}}
+                            {{#if this.companyLogo}}
+                            <img src="{{this.companyLogo}}" alt="" class="img-fluid company-logo">
+                            {{/if}}
+                            <div class="company-name">{{this.companyName}}</div>
+                            <div class="locations">{{this.locations}}</div>
+                        </div>
+                        <div class="bottom-grid">
+                            <div class="job-title">{{this.title}}</div>
+                            <span class="job-type">{{this.jobType}}</span>
+                            <a class="btn apply-now-btn" href="{{this.jobUrl}}">Apply now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            {{/each}}
-        </div> 
+                {{/each}}
+            </div> 
         </div>
     </div>
 </section>
