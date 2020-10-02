@@ -1006,26 +1006,32 @@ header nav.navbar .navbar-nav .nav-link {
   margin-bottom: 40px;
 }
 
-#contact .col-md-5 .contact-deets .socials button {
+#contact .col-md-5 .contact-deets .socials .social-link {
   background: #0073b1;
   color: #fff;
   border: none;
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  position: relative;
 }
 
-#contact .col-md-5 .contact-deets .socials button:not(:last-of-type) {
+#contact .col-md-5 .contact-deets .socials .social-link:not(:last-of-type) {
   margin-right: 20px;
 }
 
-#contact .col-md-5 .contact-deets .socials button:hover {
+#contact .col-md-5 .contact-deets .socials .social-link:hover {
   background: transparent;
   color: #444;
 }
 
-#contact .col-md-5 .contact-deets .socials button i {
+#contact .col-md-5 .contact-deets .socials .social-link i {
   font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #contact .col-md-5 .contact-deets .socials .instagram {
