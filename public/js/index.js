@@ -23,7 +23,11 @@ $(document).on("click", "#jobs-page .web-filter .search-filter-btn", function(){
     }).then(function (response) {
         console.log("success")
         if(response.data.error){
-            alert("No results found")
+            template = `<div class="no-results-wrapper">
+            <img src="/assets/illustrations/noresults.svg" class="img-fluid noresults" alt="no results found">
+          </div>`
+            var output = Mustache.render(template);
+            $("#jobs-page .job-cards").html(output);
         }else{
             renderJobs(response.data)
         }

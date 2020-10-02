@@ -53,7 +53,8 @@
                 <button class="btn filters-btn" data-toggle="modal" data-target="#job-filter-modal"><i class="fas fa-filter"></i> Filter Jobs</button>
             </div>
         </div>
-        <div class="row job-cards">
+        <div class="job-page-body">
+            <div class="row job-cards">
             {{#each jobs}}
             <div class="col-md-6 col-lg-4 job-card-wrapper">
                 <div class="job-card internship">
@@ -75,9 +76,7 @@
                 </div>
             </div>
             {{/each}}
-        </div>
-        <div class="no-results-wrapper">
-            <img src="/assets/illustrations/noresults.svg" class="img-fluid noresults" alt="no results found">
+        </div> 
         </div>
     </div>
 </section>
