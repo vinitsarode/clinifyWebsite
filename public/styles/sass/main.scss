@@ -1112,6 +1112,14 @@ footer {
 		}
 	}
 
+	.no-results-wrapper{
+		.noresults{
+			max-width: 400px;
+			display: block;
+			margin: auto;
+		}
+	}
+
 	.job-card-wrapper{
 		margin-bottom: 2rem;
 	}
