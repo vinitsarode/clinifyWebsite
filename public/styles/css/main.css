@@ -67,7 +67,7 @@ header nav.main-navbar .navbar-nav .nav-link {
 }
 
 header nav.secondary-navbar .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @media (min-width: 768px) {
@@ -1212,13 +1212,8 @@ footer .credits a:hover {
   padding: 0.5rem 1rem;
   border-radius: 0;
   border: none;
-}
-
-#jobs-page .filter-wrapper .web-filter .form-control:focus {
   -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
 }
 
 #jobs-page .filter-wrapper .web-filter .border-left-curved {
@@ -1437,13 +1432,14 @@ footer .credits a:hover {
 }
 
 #mentors-page .mentor-card-wrapper {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 #mentors-page .mentor-card {
   display: -ms-grid;
   display: grid;
   padding: 1.2rem;
+  width: 90%;
   border-radius: 10px;
   -webkit-box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
@@ -1455,8 +1451,8 @@ footer .credits a:hover {
 
 #mentors-page .mentor-card .mentor-img {
   border-radius: 50%;
-  width: 175px;
-  height: 175px;
+  width: 130px;
+  height: 130px;
   margin: auto;
 }
 

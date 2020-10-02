@@ -84,7 +84,7 @@ header {
 	nav.secondary-navbar{
 		.navbar-nav{
 			.nav-link{
-				color: rgba(0, 0, 0, 0.8);
+				color: rgba(255, 255, 255, 0.8);
 			}
 			@media (min-width: 768px) {
 				.nav-link:last-child {
@@ -127,8 +127,6 @@ header {
 				margin-left: 18px;
 				
 			}
-
-			
 
 			@media (max-width: 768px) {
 				.nav-link {
@@ -1110,10 +1108,7 @@ footer {
 				padding: 0.5rem 1rem;
 				border-radius: 0;
 				border: none;
-				&:focus{
-					box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
-					transform: translate(0px, 0px);
-				}
+				box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
 			}
 			.border-left-curved{
 				border-top-left-radius: $firadius;
@@ -1295,11 +1290,12 @@ footer {
 	background-color: #f5f7fa;
 	font-family: 'poppins', sans-serif;
 	.mentor-card-wrapper{
-		margin-bottom: 3rem;
+		margin-bottom: 4rem;
 	}
 	.mentor-card{
 		display: grid;
 		padding: 1.2rem;
+		width: 90%;
 		border-radius: 10px;
 		box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 		overflow: hidden;
@@ -1309,8 +1305,8 @@ footer {
 		
 		.mentor-img{
 			border-radius: 50%;
-			width: 175px;
-			height: 175px;
+			width: 130px;
+			height: 130px;
 			margin: auto;
 		}
 
