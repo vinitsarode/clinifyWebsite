@@ -6,7 +6,7 @@ const router = new express.Router()
 //Main Page
 router.get('/jobs', async (req, res) => {
     try {
-        const jobs = await getJob()
+        const jobs = await getJob(req.body.title, req.body.jobType, req.body.location)
         console.log(jobs)
         for(var i=0; i< 10;i++){
             var temp =''
