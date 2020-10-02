@@ -1,14 +1,22 @@
+const { response } = require('express')
 const express = require('express')
 const getJob = require('../api/jobsquare')
+const shuffle = require('../utils/shuffle')
 
 const router = new express.Router()
 
 //Main Page
 router.get('/jobs', async (req, res) => {
     try {
-        const jobs = await getJob()
-        console.log(jobs)
-        for(var i=0; i< 10;i++){
+        var jobs = await getJob("Graphic Design", undefined, undefined, 1, 10)
+        const jobs2 = await getJob("React", undefined, undefined, 1, 10)
+        const jobs3 = await getJob("FrontEnd", undefined, undefined, 1, 10)
+        const jobs4 = await getJob("Backend", undefined, undefined, 1, 10)
+        //console.log(jobs, jobs2)
+        jobs.items = jobs.items.concat(jobs2.items)
+        jobs.items = jobs.items.concat(jobs3.items)
+        jobs.items = jobs.items.concat(jobs4.items)
+        for(var i=0; i< jobs.items.length;i++){
             var temp =''
             console.log(jobs.items[i].locations)
             for(var j=0; j<jobs.items[i].locations.length && j!=4; j++){
@@ -18,6 +26,7 @@ router.get('/jobs', async (req, res) => {
             }
             jobs.items[i].locations = temp
         }
+        jobs.items = shuffle(jobs.items)
         
         res.render('jobs', { title: 'Jobs', jobs:jobs.items})
     } catch (e) {
@@ -25,6 +34,8 @@ router.get('/jobs', async (req, res) => {
     }
 
 })
+
+
 
 
 router.post('/getjobs', async (req, res) => {
