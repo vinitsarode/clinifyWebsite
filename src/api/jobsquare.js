@@ -22,8 +22,8 @@ const getJob = async (title, jobType, location, pageNumber, pageSize) => {
     // }
     if(location){
         locationfilter =  {
-            "field":"location",
-            "Value":`{${location}}`
+            field: "location",
+            value: location
         }
     }
     const obj = {
@@ -42,12 +42,11 @@ const getJob = async (title, jobType, location, pageNumber, pageSize) => {
             // },
             // {
             //     "field":"location",
-            //     "Value":"{Maharashtra}"
+            //     "value":"{Mumbai}"
             // }
             
         ]
     }
-    console.log(obj)
 
     const response = await axios.post('https://bsm8fqj8ug.execute-api.ap-south-1.amazonaws.com/v3/job/external-search',obj )
     return response.data
