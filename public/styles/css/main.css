@@ -1194,10 +1194,23 @@ footer .credits a:hover {
 #jobs-page {
   background-color: #f5f7fa;
   font-family: 'poppins', sans-serif;
+  padding: 40px 0;
+  color: #3e4f5c;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  #jobs-page {
+    padding: 70px 0;
+  }
+}
+
+#jobs-page .section-header {
+  text-align: center;
 }
 
 #jobs-page .filter-wrapper {
-  margin-bottom: 4rem;
+  margin: 4rem 0;
 }
 
 #jobs-page .filter-wrapper .mobile-filter {

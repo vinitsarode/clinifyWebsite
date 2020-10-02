@@ -1098,10 +1098,20 @@ footer {
 
 	background-color: #f5f7fa;
 	font-family: 'poppins', sans-serif;
+	padding: 40px 0;
+	color: #3e4f5c;
+	font-weight: 600;
+	@media (min-width: 768px){
+		padding: 70px 0;
+	}
+
+	.section-header{
+		text-align: center;
+	}
 
 
 	.filter-wrapper{
-		margin-bottom: 4rem;
+		margin: 4rem 0;
 		.mobile-filter{
 			display: flex;
 			justify-content: flex-end;
