@@ -42,6 +42,26 @@ $(document).on("click", "#job-filter-modal .m-search-filter-modal", function(){
     var type = $(this).parent().find("#m-type-dropdown").val();
     var location = $(this).parent().find("#m-location").val();
     console.log(title, type, location)
+    axios.post('/getjobs', {
+        title, 
+        type, 
+        location
+        
+    }).then(function (response) {
+        console.log("success")
+        if(response.data.error){
+            template = `<div class="no-results-wrapper">
+            <img src="/assets/illustrations/noresults.svg" class="img-fluid noresults" alt="no results found">
+          </div>`
+            var output = Mustache.render(template);
+            $("#jobs-page .job-page-body").html(output);
+        }else{
+            renderJobs(response.data)
+        }
+        
+    }).catch(function (error) {
+            console.log(error);
+    });
 })
 
 const renderJobs = (jobs)=>{
