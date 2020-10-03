@@ -776,6 +776,11 @@ header nav.navbar .navbar-nav .nav-link {
   border-bottom-left-radius: 5px;
 }
 
+#events .event-card .ec-footer .registration-closed-btn {
+  font-size: 14px;
+  padding: 1.2rem 1rem;
+}
+
 @media (max-width: 768px) {
   #events .event-card .ec-footer .register-btn {
     border-bottom-right-radius: 5px;

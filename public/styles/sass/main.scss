@@ -681,6 +681,10 @@ header {
 				border-radius: 0%;
 				border-bottom-left-radius: 5px;
 			}
+			.registration-closed-btn{
+				font-size: 14px;
+				padding: 1.2rem 1rem;
+			}
 
 			@media (max-width: 768px) {
 				.register-btn {
