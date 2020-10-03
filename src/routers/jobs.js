@@ -39,9 +39,8 @@ router.get('/jobs', async (req, res) => {
 
 router.post('/getjobs', async (req, res) => {
     try {
-        console.log(req.body.title, req.body.type, req.body.location)
+        //console.log(req.body.title, req.body.type, req.body.location)
         const jobs = await getJob(req.body.title, req.body.type, req.body.location, 1, 10)
-        console.log(jobs)
         if(jobs.items){
             for(var i=0; i< jobs.items.length; i++){
                 var temp =''

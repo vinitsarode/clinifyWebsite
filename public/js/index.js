@@ -41,7 +41,7 @@ $(document).on("click", "#job-filter-modal .m-search-filter-modal", function(){
     var title = $(this).parent().find("#m-job-title").val();
     var type = $(this).parent().find("#m-type-dropdown").val();
     var location = $(this).parent().find("#m-location").val();
-    console.log(title, type, location)
+    //console.log(title, type, location)
     axios.post('/getjobs', {
         title, 
         type, 
