@@ -96,3 +96,17 @@ const renderJobs = (jobs)=>{
     var output = Mustache.render(template, view);
     $("#jobs-page .job-page-body").html(output);
 }
+
+// ==================================================
+// Mentors Page
+// ==================================================
+
+$(document).ready(function () {
+	$("#mentors-page .web-filter .college-name-input").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        console.log(value);
+		$("#mentors-page .mentor-card-wrapper").filter(function () {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
+});

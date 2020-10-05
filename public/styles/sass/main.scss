@@ -1,4 +1,7 @@
 $attention-pink: #ff38609f;
+$firadius: 10px;
+$cta-btn: #1c9988;
+$dark: #36393f;
 
 @mixin flexcenter {
 	display: flex;
@@ -511,13 +514,65 @@ header {
 			line-height: 2;
 		}
 	}
-	
-}
+	$coral: #008a8a;
+	.featured-cta{
+        position: relative;
+		padding: 19px 22px;
+		margin-top: 20rem;
+        transition: all .2s ease;
+        text-decoration: none;
+        color: $dark;
 
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(0%, 12%);
+            display: block;
+            border-radius: 28px;
+            background: rgba($coral,.5);
+            width: 50px;
+            height: 50px;
+            transition: all .3s ease;
+        }
 
+        span{
+            position: relative;
+            line-height: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            vertical-align: text-bottom;
+        }
 
-#job-summary{
-	background-color: #f5f5f5;
+        svg{
+            position: relative;
+            top: 0;
+            margin-left: 10px;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke: $dark;
+            stroke-width: 2;
+            transform: translateX(-5px);
+            transition: all .3s ease;
+
+            
+        }
+        &:hover{
+            &::before{
+                width: 100%;
+                background: rgba($coral,0.8);
+            }
+            svg{
+                transform: translateX(0px);
+            }
+        }
+
+        &:active{
+            transform: scale(.96);
+        }
+    }
 }
 
 
@@ -1078,6 +1133,15 @@ footer {
 // =========================================
 // Jobs Page CSS
 // =========================================
+.section-header{
+	text-align: center;
+	color: #33373f;
+	font-weight: 600;
+	
+	@media(max-width: 768px){
+		font-size: 2rem;
+	}
+}
 
 #job-filter-modal{
 	font-family: 'poppins', sans-serif;
@@ -1096,68 +1160,18 @@ footer {
 	}
 }
 
+
 #jobs-page{
-	$firadius: 10px;
-	$cta-btn: #1c9988;
+	
 
 	background-color: #f5f7fa;
 	font-family: 'poppins', sans-serif;
 	padding: 40px 0;
-	color: #3e4f5c;
-	font-weight: 600;
+	
 	@media (min-width: 768px){
 		padding: 70px 0;
 	}
 
-	.section-header{
-		text-align: center;
-	}
-
-
-	.filter-wrapper{
-		margin: 4rem 0;
-		.mobile-filter{
-			display: flex;
-			justify-content: flex-end;
-		}
-		.web-filter{
-			display: none;
-			.form-control{
-				height: 3.5rem;
-				padding: 0.5rem 1rem;
-				border-radius: 0;
-				border: none;
-				box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
-			}
-			.border-left-curved{
-				border-top-left-radius: $firadius;
-				border-bottom-left-radius: $firadius;
-			}
-			.side-borders{
-				border-left: 1px solid #eee;
-				border-right: 1px solid #eee;
-			}
-			.search-filter-btn{
-				border-radius: 0;
-				width: 15%;
-				border-top-right-radius: $firadius;
-				border-bottom-right-radius: $firadius;
-				background-color: $cta-btn;
-				color: white;
-			}
-		}
-		@media(min-width: 600px){
-			.mobile-filter{
-				display: none;
-			}
-			.web-filter{
-				display: flex;
-			}
-		}
-		@media(max-width: 600px){
-			margin-top: 7rem;
-		}
-	}
 
 	.no-results-wrapper{
 		.noresults{
@@ -1301,6 +1315,61 @@ footer {
 }
 
 
+.filter-wrapper{
+	margin: 4rem 0;
+	@media(max-width: 600px){
+		margin: 2rem 0;
+	}
+	.mobile-filter{
+		display: flex;
+		justify-content: flex-end;
+		.filters-btn{
+			background-color: white;
+			border-radius: $firadius;
+			box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+		}
+	}
+	.web-filter{
+		display: none;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		border-radius: $firadius;
+		.form-control{
+			height: 3.5rem;
+			padding: 0.5rem 1rem;
+			border-radius: 0;
+			border: none; 
+		}
+		.border-left-curved{
+			border-top-left-radius: $firadius;
+			border-bottom-left-radius: $firadius;
+		}
+		.side-borders{
+			border-left: 1px solid #eee;
+			border-right: 1px solid #eee;
+		}
+		.right-border{
+			border-right: 1px solid #eee;
+		}
+		.search-filter-btn{
+			border-radius: 0;
+			width: 15%;
+			border-top-right-radius: $firadius;
+			border-bottom-right-radius: $firadius;
+			background-color: $cta-btn;
+			color: white;
+		}
+	}
+	@media(min-width: 600px){
+		.mobile-filter{
+			display: none;
+		}
+		.web-filter{
+			display: flex;
+		}
+	}
+}
+
+
 // ===================================================
 // Mentors Page CSS
 // ===================================================
@@ -1345,10 +1414,10 @@ footer {
 		.mentor-cta-btn{
 			margin: 10px 0;
 			border-radius: 5px;
-			background: #007bff;
+			padding: 0.5rem 3rem;
+			background: $cta-btn;
 			color: white;
 			border: none;
-			padding: 5px 10px;
 			text-align: center;
 			height: fit-content;
 			text-decoration: none;
