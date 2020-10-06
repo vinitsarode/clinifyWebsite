@@ -8,7 +8,7 @@ const router = new express.Router()
 //Main Page
 router.get('/jobs', async (req, res) => {
     try {
-        var jobs = await getJob("Graphic Design", undefined, undefined, 1, 10)
+        var jobs = await getJob("Graphic Design", undefined, undefined, 1, 11)
         const jobs2 = await getJob("React", undefined, undefined, 1, 10)
         const jobs3 = await getJob("FrontEnd", undefined, undefined, 1, 10)
         const jobs4 = await getJob("Backend", undefined, undefined, 1, 10)
@@ -40,7 +40,8 @@ router.get('/jobs', async (req, res) => {
 router.post('/getjobs', async (req, res) => {
     try {
         //console.log(req.body.title, req.body.type, req.body.location)
-        const jobs = await getJob(req.body.title, req.body.type, req.body.location, 1, 10)
+        const jobs = await getJob(req.body.title, req.body.type, req.body.location, req.body.page, 15)
+        console.log(jobs.pagination)
         if(jobs.items){
             for(var i=0; i< jobs.items.length; i++){
                 var temp =''
@@ -52,7 +53,7 @@ router.post('/getjobs', async (req, res) => {
                 jobs.items[i].locations = temp
             }
 
-            res.send(jobs.items)
+            res.send({items:jobs.items, pagination:jobs.pagination})
         }else{
             res.send({error:"No results"})
         }
