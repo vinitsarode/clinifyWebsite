@@ -158,7 +158,7 @@ $(document).on("click", "#jobs-page .job-page-body .load-more-btn", function(){
 
                 console.log(page , response.data.pagination.totalPages)
             if(page === response.data.pagination.totalPages ){
-                alert("no more results")
+                $("#jobs-page .load-more-btn").remove();
             }
         }
         
