@@ -74,7 +74,7 @@ const renderJobs = (jobs)=>{
     view = {
         jobs
     }
-    template = `<div class="row job-cards">
+    template = `
     {{#jobs}}
     <div class="col-md-6 col-lg-4 job-card-wrapper">
         <div class="job-card internship">
@@ -91,10 +91,9 @@ const renderJobs = (jobs)=>{
             </div>
         </div>
     </div>
-    {{/jobs}}
-    </div> `
+    {{/jobs}} `
     var output = Mustache.render(template, view);
-    $("#jobs-page .job-page-body").html(output);
+    $("#jobs-page .job-page-body .job-cards").html(output);
 }
 
 
@@ -111,7 +110,7 @@ $(document).on("click", "#jobs-page .job-page-body .load-more-btn", function(){
 // ==================================================
 // Mentors Page
 // ==================================================
-
+alert("connected");
 $(document).ready(function () {
 	$("#mentors-page .web-filter .college-name-input").on("keyup", function () {
         var value = $(this).val().toLowerCase();

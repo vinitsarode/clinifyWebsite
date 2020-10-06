@@ -1501,6 +1501,11 @@ footer .credits a:hover {
   border: none;
 }
 
+.filter-wrapper .web-filter .form-control:focus {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
 .filter-wrapper .web-filter .border-left-curved {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;

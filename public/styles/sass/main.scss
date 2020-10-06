@@ -1344,7 +1344,10 @@ footer {
 			height: 3.5rem;
 			padding: 0.5rem 1rem;
 			border-radius: 0;
-			border: none; 
+			border: none;
+			&:focus{
+				transform: translate(0px, 0px);
+			} 
 		}
 		.border-left-curved{
 			border-top-left-radius: $firadius;
