@@ -36,7 +36,7 @@ $(document).on("click", "#jobs-page .web-filter .search-filter-btn", function(){
             var output = Mustache.render(template);
             $("#jobs-page .job-page-body").html(output);
         }else{
-            renderJobs(response.data.items)
+            renderJobs(response.data.items, response.data.pagination.totalPages)
         }
         
     }).catch(function (error) {
@@ -65,7 +65,7 @@ $(document).on("click", "#job-filter-modal .m-search-filter-modal", function(){
             var output = Mustache.render(template);
             $("#jobs-page .job-page-body").html(output);
         }else{
-            renderJobs(response.data.items)
+            renderJobs(response.data.items, response.data.pagination.totalPages)
         }
         
     }).catch(function (error) {
@@ -73,7 +73,7 @@ $(document).on("click", "#job-filter-modal .m-search-filter-modal", function(){
     });
 })
 
-const renderJobs = (jobs)=>{
+const renderJobs = (jobs, total)=>{
     for(var i =0;i<jobs.length; i++){
         if(!jobs[i].companyLogo){
             jobs[i].companyLogo = "/assets/logos/company.svg"
@@ -102,6 +102,12 @@ const renderJobs = (jobs)=>{
     {{/jobs}} `
     var output = Mustache.render(template, view);
     $("#jobs-page .job-page-body .job-cards").html(output);
+    console
+    if(page === total ){
+        $("#jobs-page .load-more-btn").hide();
+    }else{
+        $("#jobs-page .load-more-btn").show();
+    }
 }
 
 
@@ -110,13 +116,13 @@ const renderJobs = (jobs)=>{
 
 $(document).on("click", "#jobs-page .job-page-body .load-more-btn", function(){
     page = page + 1
-    console.log(title, type, loc, page)
+    $("#jobs-page .load-more-btn").prop("disabled", true);
+    //console.log(title, type, loc, page)
     axios.post('/getjobs', {
         title, 
         type, 
         loc,
         page
-        
     }).then(function (response) {
         console.log("success")
         if(response.data.error){
@@ -156,14 +162,17 @@ $(document).on("click", "#jobs-page .job-page-body .load-more-btn", function(){
             var output = Mustache.render(template, view);
             $("#jobs-page .job-page-body .job-cards").append(output);
 
-                console.log(page , response.data.pagination.totalPages)
+            $("#jobs-page .load-more-btn").prop("disabled", false);
+
+                //console.log(page , response.data.pagination.totalPages)
             if(page === response.data.pagination.totalPages ){
-                $("#jobs-page .load-more-btn").remove();
+                $("#jobs-page .load-more-btn").hide();
             }
         }
         
     }).catch(function (error) {
-            console.log(error);
+        $("#jobs-page .load-more-btn").prop("disabled", true);
+        console.log(error);
     });
 })
 

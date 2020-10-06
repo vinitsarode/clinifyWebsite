@@ -41,7 +41,7 @@ router.post('/getjobs', async (req, res) => {
     try {
         //console.log(req.body.title, req.body.type, req.body.location)
         const jobs = await getJob(req.body.title, req.body.type, req.body.location, req.body.page, 15)
-        console.log(jobs.pagination)
+        //console.log(jobs.pagination)
         if(jobs.items){
             for(var i=0; i< jobs.items.length; i++){
                 var temp =''
