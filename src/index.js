@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/mentors', (req, res) => {
-    res.render('mentors', {title: 'Mentors'})
+    res.render('mentors', {title: 'Mentors', headerSec:true})
 })
 
 
