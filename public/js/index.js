@@ -3,12 +3,12 @@ var title = undefined
 var type = undefined
 var loc = undefined
 
-$(function () {
-    $(document).scroll(function () {
-        var $nav = $("header nav.main-navbar");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    });
-});
+// $(function () {
+//     $(document).scroll(function () {
+//         var $nav = $("header nav.main-navbar");
+//         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+//     });
+// });
 
 
 // ==============================
