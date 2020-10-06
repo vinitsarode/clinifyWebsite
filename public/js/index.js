@@ -97,6 +97,17 @@ const renderJobs = (jobs)=>{
     $("#jobs-page .job-page-body").html(output);
 }
 
+
+// Load more button
+
+
+$(document).on("click", "#jobs-page .job-page-body .load-more-btn", function(){
+    console.log("chedi");
+})
+
+
+
+
 // ==================================================
 // Mentors Page
 // ==================================================

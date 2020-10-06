@@ -1454,6 +1454,13 @@ footer .credits a:hover {
   background-color: #30e371;
 }
 
+#jobs-page .load-more-btn {
+  display: block;
+  margin: 2rem auto;
+  background-color: #ddd;
+  width: 80%;
+}
+
 .filter-wrapper {
   margin: 4rem 0;
 }
