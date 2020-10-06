@@ -1160,6 +1160,15 @@ footer {
 	}
 }
 
+.small-header{
+	text-align: center;
+	padding: 8px 0;
+	.notice-link{
+		color: #36393f;
+		font-size: 14px;
+		letter-spacing: 0.2px;
+	}
+}
 
 #jobs-page{
 	
@@ -1392,7 +1401,6 @@ footer {
 	}
 	.mentor-card{
 		display: grid;
-		padding: 1.2rem;
 		width: 95%;
 		border-radius: 10px;
 		box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
@@ -1402,27 +1410,24 @@ footer {
 		text-align: center;
 		
 		.mentor-img{
-			border-radius: 50%;
-			width: 130px;
-			height: 130px;
+			width: 100%;
+			height: 200px;
 			margin: auto;
+			object-fit: cover;
 		}
 
-		.mentor-name{
-			padding: 1rem 0;
-		}
+	.mentor-card-body{
+		padding: 1.2rem 1rem;
+	}
 
 		.mentor-college{
-			font-size: 20px;
-			font-weight: 600;
-		}
-
-		.mentor-branch{
-			margin-bottom: 2rem;
+			font-size: 19px;
+			color: #36393f;
+			font-weight: 500;
+			margin-bottom: 1.2rem;
 		}
 
 		.mentor-cta-btn{
-			margin: 10px 0;
 			border-radius: 5px;
 			padding: 0.5rem 3rem;
 			background: $cta-btn;
@@ -1434,6 +1439,5 @@ footer {
 			align-self: center;
 			justify-self: center;
 		}
-		
 	}
 }
