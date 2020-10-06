@@ -176,7 +176,6 @@ $(document).on("click", "#jobs-page .job-page-body .load-more-btn", function(){
 $(document).ready(function () {
 	$("#mentors-page .web-filter .college-name-input").on("keyup", function () {
         var value = $(this).val().toLowerCase();
-        console.log(value);
 		$("#mentors-page .mentor-card-wrapper").filter(function () {
 			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 		});
