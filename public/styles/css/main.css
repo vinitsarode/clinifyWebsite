@@ -113,6 +113,10 @@ header nav.navbar .navbar-nav .nav-link {
   }
 }
 
+.bg-black {
+  background-color: #101010;
+}
+
 .scrolled {
   background-color: #101010 !important;
   -webkit-transition: background-color 500ms linear;
@@ -232,6 +236,12 @@ header nav.navbar .navbar-nav .nav-link {
   margin: 0;
   letter-spacing: 1px;
   font-family: 'raleway', sans-serif;
+}
+
+@media (max-width: 768px) {
+  #landing-page .container .hero-text {
+    font-size: 24px;
+  }
 }
 
 #landing-page .container .cta-btn {

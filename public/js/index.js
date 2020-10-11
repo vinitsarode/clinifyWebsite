@@ -10,6 +10,10 @@ $(function () {
     });
 });
 
+$(document).on("click", ".main-navbar .navbar-toggler", function(){
+    $(this).closest(".navbar").toggleClass("bg-black")
+})
+
 
 // ==============================
 // Jobs Page

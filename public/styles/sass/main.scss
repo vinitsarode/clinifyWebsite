@@ -140,6 +140,10 @@ header {
 	}
 }
 
+.bg-black{
+	background-color: rgb(16, 16, 16);
+}
+
 .scrolled {
 	background-color: rgb(16, 16, 16) !important;
 	transition: background-color 500ms linear;
@@ -245,6 +249,9 @@ header {
 			margin: 0;
 			letter-spacing: 1px;
 			font-family: 'raleway', sans-serif;
+			@media (max-width:768px){
+				font-size: 24px;
+			}
 		}
 
 		.cta-btn {
