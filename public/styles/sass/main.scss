@@ -1282,10 +1282,10 @@ footer {
 
 
 	.no-results-wrapper{
+		display: block;
+		margin: auto;
 		.noresults{
 			max-width: 400px;
-			display: block;
-			margin: auto;
 		}
 	}
 

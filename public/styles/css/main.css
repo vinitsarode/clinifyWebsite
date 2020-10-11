@@ -1409,10 +1409,13 @@ footer .credits a:hover {
   }
 }
 
-#jobs-page .no-results-wrapper .noresults {
-  max-width: 400px;
+#jobs-page .no-results-wrapper {
   display: block;
   margin: auto;
+}
+
+#jobs-page .no-results-wrapper .noresults {
+  max-width: 400px;
 }
 
 #jobs-page .job-card-wrapper {
