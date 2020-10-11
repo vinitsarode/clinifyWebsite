@@ -59,7 +59,7 @@
             </div>
         </div>
         <div class="job-page-body">
-            <div class="row job-cards">
+            <div class="row job-cards clinify-card">
             {{#each jobs}}
                 <div class="col-md-6 col-lg-4 job-card-wrapper">
                     <div class="job-card internship">
@@ -76,7 +76,14 @@
                         <div class="bottom-grid">
                             <div class="job-title">{{this.title}}</div>
                             <span class="job-type">{{this.jobType}}</span>
-                            <a class="btn apply-now-btn" href="{{this.jobUrl}}">Apply now</a>
+                            <a href="{{this.jobUrl}}" class="apply-now-btn card-cta">
+								<span>Apply now</span>
+								<svg width="13px" height="10px" viewBox="0 0 13 10">
+									<path d="M1,5 L11,5"></path>
+									<polyline points="8 1 12 5 8 9"></polyline>
+								</svg>
+							</a>
+                            {{!-- <a class="btn apply-now-btn" href="{{this.jobUrl}}">Apply now</a> --}}
                         </div>
                     </div>
                 </div>

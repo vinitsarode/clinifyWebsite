@@ -1,6 +1,6 @@
 $attention-pink: #ff38609f;
 $firadius: 10px;
-$cta-btn: #1c9988;
+$cta-btn: #00baa1;
 $dark: #36393f;
 
 @mixin flexcenter {
@@ -112,9 +112,9 @@ header {
 		font-family: "raleway", sans-serif;
 
 		.navbar-brand {
-			font-size: 26px;
-			font-weight: 500;
-			@include brand-color();
+			.brand-logo{
+				max-height: 40px;
+			}
 		}
 
 		.navbar-toggler {
@@ -141,15 +141,17 @@ header {
 }
 
 .scrolled {
-	background-color: rgba(20, 20, 20, 0.9) !important;
+	background-color: rgb(16, 16, 16) !important;
 	transition: background-color 500ms linear;
+	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.35);
 }
 
 // ======================LANDING PAGE CSS===========================
 
+
+
 #landing-page {
 	width: 100%;
-	height: 100vh;
 	background: linear-gradient(180deg, #000000 50%, #003c38 100%);
 	// background: linear-gradient(298.6deg, #00081499 67.5%, #37332Dff 91.38%);
 	overflow: hidden;
@@ -217,14 +219,7 @@ header {
 	}
 
 	.container {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-
-		position: relative;
-		z-index: 2;
+		
 
 		color: #f0f0f0;
 		.hero-brand {
@@ -262,6 +257,20 @@ header {
 			border: none;
 			margin-top: 3rem;
 		}
+	}
+}
+
+#landing-page.main-hero{
+	height: 100vh;
+	.container{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		position: relative;
+		z-index: 2;
 	}
 }
 
@@ -326,6 +335,67 @@ header {
 		transform: translateY(560px) translateX(2560px) rotate(110deg);
 		opacity: 1;
 		height: 800px;
+	}
+}
+
+
+
+
+#landing-page.page-hero{
+	padding: 10rem 0;
+	.hero-text{
+		color:#f5f5f5;
+	}
+	.hero-subtitle{
+		color: #c4c0c0;
+		font-size: 20px;
+		font-weight: 500;
+		margin: 0;
+		letter-spacing: 1px;
+		font-family: 'raleway', sans-serif;
+		margin-bottom: 3rem;
+	}
+	@media (max-width:992px){
+		padding: 8rem 0 4rem; 
+	}
+	.row{
+		width: 100%;
+	}
+	.hero-card{
+		background-color: white;
+		border-radius: 1rem;
+		height: 255px;
+		width: 280px;
+		box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.9);
+		@media (max-width:992px){
+			margin: 0 auto 2rem;
+		}
+		color: $dark;
+		padding: 1rem 1.2rem;
+		.hero-card-title{
+			font-weight: 700;
+			font-size: 18px;
+		}
+
+		.hero-card-icon{
+			height: 100px;
+			max-width: 100%;
+			object-fit: contain;
+			margin: 1.7rem auto;
+			display: block;
+		}
+
+		.hero-card-text{
+			color: #6c757d;
+			font-size: 16px;
+		}
+	}
+	.hero-card.middle-card{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.hero-card.last-card{
+		margin-left: auto;
 	}
 }
 
@@ -475,7 +545,7 @@ header {
 	padding: 40px 0;
 	box-shadow: 2px 4px 30px rgba(0,0,0,0.1);
 	.section-headline {
-		color: #3e4f5c;
+		color: #36393f;
 		font-weight: 600;
 		text-align: center;
 		
@@ -494,6 +564,11 @@ header {
 		margin-bottom: 40px;
 	}
 
+	.col-md-6{
+		display: flex;
+		align-items: center;
+	}
+
 	.img-column{
 		@media (min-width: 768px){
 			border-right: 1px solid #e0e0e0;
@@ -506,19 +581,34 @@ header {
 	}
 
 	.text-column{
-		padding: 30px 100px;
+		padding: 30px 30px 0;
 
+		@media (min-width:768px){
+			padding: 0px 100px;
+		}
+
+		.question{
+			font-size: 20px;
+			color: $dark;
+			font-weight: 600;
+			margin-bottom: 2rem;
+		}
 		.section-text{
 			color: #6c757d;
-			font-size: 18px;
-			line-height: 2;
+			font-size: 16px;
+			line-height: 1.6;
+			margin: 0;
+		}
+		.feature-cta{
+			margin-top: 2rem;
 		}
 	}
 	$coral: #008a8a;
 	.featured-cta{
+		margin-top: 1.5rem;
+		display: inline-block;
         position: relative;
 		padding: 19px 22px;
-		margin-top: 20rem;
         transition: all .2s ease;
         text-decoration: none;
         color: $dark;
@@ -528,7 +618,7 @@ header {
             position: absolute;
             top: 0;
             left: 0;
-            transform: translate(0%, 12%);
+            transform: translate(0%, 14%);
             display: block;
             border-radius: 28px;
             background: rgba($coral,.5);
@@ -540,8 +630,7 @@ header {
         span{
             position: relative;
             line-height: 18px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
+            font-weight: 400;
             vertical-align: text-bottom;
         }
 
@@ -563,7 +652,10 @@ header {
             &::before{
                 width: 100%;
                 background: rgba($coral,0.8);
-            }
+			}
+			span{
+				color: #fafafa;
+			}
             svg{
                 transform: translateX(0px);
             }
@@ -1135,7 +1227,7 @@ footer {
 // =========================================
 .section-header{
 	text-align: center;
-	color: #33373f;
+	color: $dark;
 	font-weight: 600;
 	
 	@media(max-width: 768px){
@@ -1173,7 +1265,7 @@ footer {
 #jobs-page{
 	
 
-	background-color: #f5f7fa;
+	background-color: #f5f7f7;
 	font-family: 'poppins', sans-serif;
 	padding: 40px 0;
 	
@@ -1225,12 +1317,13 @@ footer {
 			padding: 10px;
 			border-radius: 5px;
 			align-self: center;
-			
+			border: 1px solid #eee;			
 		}
 		.company-name{
 			grid-area: name;
 			font-size: 14px;
 			color: #34363f;
+			font-weight: 500;
 			align-self: center;
 		}
 		.locations{
@@ -1258,9 +1351,9 @@ footer {
 		.job-title{
 			grid-area: title;
 			font-size: 16px;
-			color: #3e3e4b;
+			color: #36393f;
 			font-weight: 600;
-			padding: 1.5rem 0;
+			padding: 1.1rem 0;
 			text-transform: capitalize;
 		}
 		.job-type{
@@ -1278,24 +1371,25 @@ footer {
 			padding: 0 8px;
 			letter-spacing: 0.3px;
 		}
-		.apply-now-btn{
-			grid-area: applybtn;
-			border-radius: 5px;
-			background: $cta-btn;
-			color: white;
-			border: none;
-			padding: 5px 10px;
-			font-size: 13px;
-			font-weight: 400;
-			width: 110px;
-			text-align: center;
+		// .apply-now-btn{
+		// 	grid-area: applybtn;
+		// 	border-radius: 5px;
+		// 	background: $cta-btn;
+		// 	color: white;
+		// 	border: none;
+		// 	padding: 5px 10px;
+		// 	font-size: 13px;
+		// 	font-weight: 400;
+		// 	width: 110px;
+		// 	text-align: center;
 
-			height: fit-content;
-			text-decoration: none;
-			align-self: center;
-			justify-self: flex-end;
-		}
+		// 	height: fit-content;
+		// 	text-decoration: none;
+		// 	align-self: center;
+		// 	justify-self: flex-end;
+		// }
 	}
+	
 
 	.job-card.internship{
 		.job-type{
@@ -1347,7 +1441,8 @@ footer {
 	}
 	.web-filter{
 		display: none;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		// box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 		border-radius: $firadius;
 		.form-control{
 			height: 3.5rem;
@@ -1388,20 +1483,76 @@ footer {
 	}
 }
 
+.clinify-card{
+	$coral: #008a8a;
+	.card-cta{
+		display: inline-block;
+        position: relative;
+        transition: all .2s ease;
+        text-decoration: none;
+		color: $dark;
+		align-self: center;
+		justify-self: flex-end;
+
+        span{
+            position: relative;
+            line-height: 18px;
+			font-weight: 600;
+			font-size: 14px;
+			color: $coral;
+        }
+
+        svg{
+            position: relative;
+            top: 0;
+            margin-left: 10px;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke: $coral;
+            stroke-width: 2;
+            transform: translateX(-5px);
+            transition: all .3s ease;
+
+            
+        }
+        &:hover{
+            &::before{
+                width: 100%;
+                background: rgba($coral,0.8);
+			}
+            svg{
+                transform: translateX(0px);
+            }
+        }
+
+        &:active{
+            transform: scale(.96);
+        }
+    }
+}
+
 
 // ===================================================
 // Mentors Page CSS
 // ===================================================
 
 #mentors-page{
-	background-color: #f5f7fa;
+	background-color: #f5f9fa;
 	font-family: 'poppins', sans-serif;
+	.section-header{
+		text-align: start;
+	}
+	.filter-wrapper{
+		margin-top: 2rem;
+	}
 	.mentor-card-wrapper{
 		margin-bottom: 4rem;
 	}
 	.mentor-card{
 		display: grid;
-		width: 95%;
+		width: 90%;
+		margin: auto;
 		border-radius: 10px;
 		box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 		overflow: hidden;
@@ -1412,7 +1563,6 @@ footer {
 		.mentor-img{
 			width: 100%;
 			height: 200px;
-			margin: auto;
 			object-fit: cover;
 		}
 
