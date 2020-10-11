@@ -38,7 +38,7 @@ $(document).on("click", "#jobs-page .web-filter .search-filter-btn", function(){
             <img src="/assets/illustrations/noresults.svg" class="img-fluid noresults" alt="no results found">
           </div>`
             var output = Mustache.render(template);
-            $("#jobs-page .job-page-body").html(output);
+            $("#jobs-page .job-page-body .job-cards").html(output);
         }else{
             renderJobs(response.data.items, response.data.pagination.totalPages)
         }
@@ -67,7 +67,7 @@ $(document).on("click", "#job-filter-modal .m-search-filter-modal", function(){
             <img src="/assets/illustrations/noresults.svg" class="img-fluid noresults" alt="no results found">
           </div>`
             var output = Mustache.render(template);
-            $("#jobs-page .job-page-body").html(output);
+            $("#jobs-page .job-page-body .job-cards").html(output);
         }else{
             renderJobs(response.data.items, response.data.pagination.totalPages)
         }
@@ -134,7 +134,7 @@ $(document).on("click", "#jobs-page .job-page-body .load-more-btn", function(){
             <img src="/assets/illustrations/noresults.svg" class="img-fluid noresults" alt="no results found">
           </div>`
             var output = Mustache.render(template);
-            $("#jobs-page .job-page-body").html(output);
+            $("#jobs-page .job-page-body .job-cards").html(output);
         }else{
             var jobs = response.data.items
             for(var i =0;i<jobs.length; i++){
