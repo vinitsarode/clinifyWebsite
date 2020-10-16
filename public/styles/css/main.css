@@ -406,11 +406,14 @@ header nav.navbar .navbar-nav .nav-link {
 }
 
 #landing-page.page-hero {
-  padding: 10rem 0;
+  padding: 12.5rem 0;
 }
 
 #landing-page.page-hero .hero-text {
-  color: #f5f5f5;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
 }
 
 #landing-page.page-hero .hero-subtitle {
@@ -420,7 +423,8 @@ header nav.navbar .navbar-nav .nav-link {
   margin: 0;
   letter-spacing: 1px;
   font-family: 'raleway', sans-serif;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
 @media (max-width: 992px) {
@@ -466,7 +470,8 @@ header nav.navbar .navbar-nav .nav-link {
 
 #landing-page.page-hero .hero-card .hero-card-text {
   color: #6c757d;
-  font-size: 16px;
+  font-size: 17px;
+  text-align: center;
 }
 
 #landing-page.page-hero .hero-card.middle-card {

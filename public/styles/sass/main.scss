@@ -349,9 +349,12 @@ header {
 
 
 #landing-page.page-hero{
-	padding: 10rem 0;
+	padding: 12.5rem 0;
 	.hero-text{
-		color:#f5f5f5;
+		color:#ffffff;
+		text-align: center;
+		margin-bottom: 0.5rem;
+		font-size: 2.5rem;
 	}
 	.hero-subtitle{
 		color: #c4c0c0;
@@ -360,7 +363,8 @@ header {
 		margin: 0;
 		letter-spacing: 1px;
 		font-family: 'raleway', sans-serif;
-		margin-bottom: 3rem;
+		margin-bottom: 4rem;
+		text-align: center;
 	}
 	@media (max-width:992px){
 		padding: 8rem 0 4rem; 
@@ -394,7 +398,9 @@ header {
 
 		.hero-card-text{
 			color: #6c757d;
-			font-size: 16px;
+			font-size: 17px;
+			text-align: center;
+
 		}
 	}
 	.hero-card.middle-card{
