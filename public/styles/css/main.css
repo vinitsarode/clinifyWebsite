@@ -40,6 +40,26 @@ p {
   }
 }
 
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 14px;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 14px;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 14px;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 14px;
+}
+
 header nav.main-navbar {
   position: fixed;
   z-index: 20;
@@ -694,14 +714,15 @@ header nav.navbar .navbar-nav .nav-link {
 }
 
 .feature-box .text-column .question {
-  font-size: 20px;
-  color: #36393f;
-  font-weight: 600;
+  font-size: 22px;
+  color: #6c757d;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   margin-bottom: 2rem;
 }
 
 .feature-box .text-column .section-text {
-  color: #6c757d;
+  color: #777;
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
@@ -709,6 +730,10 @@ header nav.navbar .navbar-nav .nav-link {
 
 .feature-box .text-column .feature-cta {
   margin-top: 2rem;
+  background-color: #ff8484;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
 }
 
 .feature-box .featured-cta {
@@ -731,7 +756,7 @@ header nav.navbar .navbar-nav .nav-link {
           transform: translate(0%, 14%);
   display: block;
   border-radius: 28px;
-  background: rgba(0, 138, 138, 0.5);
+  background: rgba(242, 95, 92, 0.5);
   width: 50px;
   height: 50px;
   -webkit-transition: all .3s ease;
@@ -762,7 +787,7 @@ header nav.navbar .navbar-nav .nav-link {
 
 .feature-box .featured-cta:hover::before {
   width: 100%;
-  background: rgba(0, 138, 138, 0.8);
+  background: rgba(242, 95, 92, 0.8);
 }
 
 .feature-box .featured-cta:hover span {
@@ -1643,7 +1668,7 @@ footer .credits a:hover {
   width: 15%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: #00baa1;
+  background-color: #36393f;
   color: white;
 }
 
@@ -1655,6 +1680,18 @@ footer .credits a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+#mentors-page .filter-wrapper .web-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #mentors-page .filter-wrapper .web-filter .search-filter-btn {
+    width: auto;
   }
 }
 
@@ -1714,6 +1751,12 @@ footer .credits a:hover {
   font-family: 'poppins', sans-serif;
 }
 
+@media (min-width: 768px) {
+  #mentors-page {
+    padding: 80px 0;
+  }
+}
+
 #mentors-page .section-header {
   text-align: start;
 }
@@ -1749,10 +1792,20 @@ footer .credits a:hover {
 
 #mentors-page .mentor-card .mentor-card-body {
   padding: 1.2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #mentors-page .mentor-card .mentor-college {
-  font-size: 19px;
+  font-size: 17px;
   color: #36393f;
   font-weight: 500;
   margin-bottom: 1.2rem;

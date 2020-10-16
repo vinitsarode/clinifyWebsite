@@ -527,15 +527,15 @@
 
 <section id="mentors-page" class="layer">
     <div class="container">
-        <h3 class="section-header">Get started.</h3>
+        {{!-- <h3 class="section-header">Get started.</h3> --}}
         <div class="filter-wrapper">
             <div class="web-filter">
                 <input class="form-control border-left-curved right-border college-name-input" type="text" placeholder="College name">
                 <button class="btn search-filter-btn">Search</button>
             </div>
-            <div class="mobile-filter">
+            {{!-- <div class="mobile-filter">
                 <button class="btn filters-btn" data-toggle="modal" data-target="#job-filter-modal"><i class="fas fa-filter"></i> Filter mentors</button>
-            </div>
+            </div> --}}
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-4 mentor-card-wrapper">
@@ -590,7 +590,7 @@
             </div>
             <div class="col-md-6 col-lg-4 mentor-card-wrapper">
                 <div class="mentor-card clinify-card">
-                    <img src="/assets/img/dtu.jpg" alt="" class="img-fluid mentor-img">
+                    <img src="/assets/img/dtu.jpeg" alt="" class="img-fluid mentor-img">
                     <div class="mentor-card-body">
 						<div class="keywords d-none">dtu</div>
                         <div class="mentor-college">Delhi Technological University, Delhi</div>
@@ -620,6 +620,22 @@
                     </div>
                 </div>
             </div>
+			<div class="col-md-6 col-lg-4 mentor-card-wrapper" data-keywords="iitb">
+                <div class="mentor-card clinify-card">
+                    <img src="/assets/img/iitb.jpeg" alt="" class="img-fluid mentor-img">
+                    <div class="mentor-card-body">
+						<div class="keywords d-none">iitb iit bombay</div>
+                        <div class="mentor-college">Indian Institute of Technology, Bombay</div>
+                        <a href="" class="apply-now-btn card-cta">
+							<span>Get mentored</span>
+							<svg width="13px" height="10px" viewBox="0 0 13 10">
+								<path d="M1,5 L11,5"></path>
+								<polyline points="8 1 12 5 8 9"></polyline>
+							</svg>
+						</a>
+                    </div>
+                </div>
+            </div>
 			<div class="col-md-6 col-lg-4 mentor-card-wrapper">
                 <div class="mentor-card clinify-card">
                     <img src="/assets/img/iiithyd.jpg" alt="" class="img-fluid mentor-img">
@@ -636,12 +652,28 @@
                     </div>
                 </div>
             </div>
-			<div class="col-md-6 col-lg-4 mentor-card-wrapper" data-keywords="iitb">
+			<div class="col-md-6 col-lg-4 mentor-card-wrapper">
                 <div class="mentor-card clinify-card">
-                    <img src="/assets/img/iitb.jpeg" alt="" class="img-fluid mentor-img">
+                    <img src="/assets/img/dypcet.jpg" alt="" class="img-fluid mentor-img">
                     <div class="mentor-card-body">
-						<div class="keywords d-none">iitb iit bombay</div>
-                        <div class="mentor-college">Indian Institute of Technology, Bombay</div>
+						<div class="keywords d-none">dypcet</div>
+                        <div class="mentor-college">DY. Patil College of Engineering and Technology, Kolhapur</div>
+                        <a href="" class="apply-now-btn card-cta">
+							<span>Get mentored</span>
+							<svg width="13px" height="10px" viewBox="0 0 13 10">
+								<path d="M1,5 L11,5"></path>
+								<polyline points="8 1 12 5 8 9"></polyline>
+							</svg>
+						</a>
+                    </div>
+                </div>
+            </div>
+			<div class="col-md-6 col-lg-4 mentor-card-wrapper">
+                <div class="mentor-card clinify-card">
+                    <img src="/assets/img/isme.jpg" alt="" class="img-fluid mentor-img">
+                    <div class="mentor-card-body">
+						<div class="keywords d-none">isme</div>
+                        <div class="mentor-college">Indian School of Management and Entrepreneurship, Mumbai</div>
                         <a href="" class="apply-now-btn card-cta">
 							<span>Get mentored</span>
 							<svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -830,10 +862,10 @@
             </div>
 			<div class="col-md-6 col-lg-4 mentor-card-wrapper">
                 <div class="mentor-card clinify-card">
-                    <img src="/assets/img/amitymumbai.jpg" alt="" class="img-fluid mentor-img">
+                    <img src="/assets/img/unimumbai.jpg" alt="" class="img-fluid mentor-img">
                     <div class="mentor-card-body">
-						<div class="keywords d-none">aum au</div>
-                        <div class="mentor-college">Amity University, Mumbai</div>
+						<div class="keywords d-none">bombay um</div>
+                        <div class="mentor-college">University of Mumbai</div>
                         <a href="" class="apply-now-btn card-cta">
 							<span>Get mentored</span>
 							<svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -846,10 +878,10 @@
             </div>
 			<div class="col-md-6 col-lg-4 mentor-card-wrapper">
                 <div class="mentor-card clinify-card">
-                    <img src="/assets/img/dypcet.jpg" alt="" class="img-fluid mentor-img">
+                    <img src="/assets/img/amitymumbai.jpg" alt="" class="img-fluid mentor-img">
                     <div class="mentor-card-body">
-						<div class="keywords d-none">dypcet</div>
-                        <div class="mentor-college">DY. Patil College of Engineering and Technology, Kolhapur</div>
+						<div class="keywords d-none">aum au</div>
+                        <div class="mentor-college">Amity University, Mumbai</div>
                         <a href="" class="apply-now-btn card-cta">
 							<span>Get mentored</span>
 							<svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -878,22 +910,6 @@
             </div>
 			<div class="col-md-6 col-lg-4 mentor-card-wrapper">
                 <div class="mentor-card clinify-card">
-                    <img src="/assets/img/isme.jpg" alt="" class="img-fluid mentor-img">
-                    <div class="mentor-card-body">
-						<div class="keywords d-none">isme</div>
-                        <div class="mentor-college">Indian School of Management and Entrepreneurship, Mumbai</div>
-                        <a href="" class="apply-now-btn card-cta">
-							<span>Get mentored</span>
-							<svg width="13px" height="10px" viewBox="0 0 13 10">
-								<path d="M1,5 L11,5"></path>
-								<polyline points="8 1 12 5 8 9"></polyline>
-							</svg>
-						</a>
-                    </div>
-                </div>
-            </div>
-			<div class="col-md-6 col-lg-4 mentor-card-wrapper">
-                <div class="mentor-card clinify-card">
                     <img src="/assets/img/nfscnagpur.jpg" alt="" class="img-fluid mentor-img">
                     <div class="mentor-card-body">
 						<div class="keywords d-none">nfsc</div>
@@ -910,10 +926,10 @@
             </div>
 			<div class="col-md-6 col-lg-4 mentor-card-wrapper">
                 <div class="mentor-card clinify-card">
-                    <img src="/assets/img/unimumbai.jpg" alt="" class="img-fluid mentor-img">
+                    <img src="/assets/img/ethiraj.jpeg" alt="" class="img-fluid mentor-img">
                     <div class="mentor-card-body">
-						<div class="keywords d-none">bombay um</div>
-                        <div class="mentor-college">University of Mumbai</div>
+						<div class="keywords d-none">ecw</div>
+                        <div class="mentor-college">Ethiraj College for Women, Chennai</div>
                         <a href="" class="apply-now-btn card-cta">
 							<span>Get mentored</span>
 							<svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -924,7 +940,22 @@
                     </div>
                 </div>
             </div>
-			
+			<div class="col-md-6 col-lg-4 mentor-card-wrapper">
+                <div class="mentor-card clinify-card">
+                    <img src="/assets/img/indraprastha.jpeg" alt="" class="img-fluid mentor-img">
+                    <div class="mentor-card-body">
+						<div class="keywords d-none">iiitd</div>
+                        <div class="mentor-college">Indraprastha Institute of Information Technology, Delhi</div>
+                        <a href="" class="apply-now-btn card-cta">
+							<span>Get mentored</span>
+							<svg width="13px" height="10px" viewBox="0 0 13 10">
+								<path d="M1,5 L11,5"></path>
+								<polyline points="8 1 12 5 8 9"></polyline>
+							</svg>
+						</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
