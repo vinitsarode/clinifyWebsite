@@ -730,10 +730,12 @@ header nav.navbar .navbar-nav .nav-link {
 
 .feature-box .text-column .feature-cta {
   margin-top: 2rem;
-  background-color: #ff8484;
+  background-color: #008a8a;
   color: white;
-  padding: 0.5rem 2rem;
+  font-size: 17px;
+  padding: 0.6rem 2.8rem;
   border-radius: 2rem;
+  text-transform: uppercase;
 }
 
 .feature-box .featured-cta {
