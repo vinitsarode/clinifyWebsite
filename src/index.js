@@ -7,6 +7,10 @@ const cookieParser = require('cookie-parser')
 const jobRouter = require('./routers/jobs')
 
 const app = express()
+if (app.get("env") === "production") {
+    const enforce = require('express-sslify')
+    app.use(enforce.HTTPS({ trustProtoHeader: true }));
+}
 const port = process.env.PORT
 
 app.use(bodyParser.urlencoded({ extended: false }))
