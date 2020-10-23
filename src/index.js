@@ -11,7 +11,7 @@ if (app.get("env") === "production") {
     const enforce = require('express-sslify')
     app.use(enforce.HTTPS({ trustProtoHeader: true }));
 }
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.json())
