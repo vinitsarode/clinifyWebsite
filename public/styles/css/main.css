@@ -1429,6 +1429,11 @@ footer .credits a:hover {
   letter-spacing: 0.2px;
 }
 
+.notice {
+  padding: 0.8rem 2rem;
+  background-color: #ededed;
+}
+
 #jobs-page {
   background-color: #f5f7f7;
   font-family: 'poppins', sans-serif;
