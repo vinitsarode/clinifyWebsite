@@ -1606,6 +1606,7 @@ footer {
 		margin-bottom: 4rem;
 	}
 	.mentor-card{
+		position: relative;
 		display: grid;
 		width: 90%;
 		margin: auto;
@@ -1615,6 +1616,13 @@ footer {
 		background-color: white;
 		height: 100%;
 		text-align: center;
+
+		.no-mentor{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(38deg);
+		}
 		
 		.mentor-img{
 			width: 100%;
@@ -1622,12 +1630,13 @@ footer {
 			object-fit: cover;
 		}
 
-	.mentor-card-body{
-		padding: 1.2rem 1rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
+		.mentor-card-body{
+			padding: 1.2rem 1rem;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
 
 		.mentor-college{
 			font-size: 17px;

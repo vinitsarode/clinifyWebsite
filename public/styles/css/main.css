@@ -1777,6 +1777,7 @@ footer .credits a:hover {
 }
 
 #mentors-page .mentor-card {
+  position: relative;
   display: -ms-grid;
   display: grid;
   width: 90%;
@@ -1790,6 +1791,14 @@ footer .credits a:hover {
   text-align: center;
 }
 
+#mentors-page .mentor-card .no-mentor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(38deg);
+          transform: translate(-50%, -50%) rotate(38deg);
+}
+
 #mentors-page .mentor-card .mentor-img {
   width: 100%;
   height: 200px;
@@ -1799,6 +1808,7 @@ footer .credits a:hover {
 
 #mentors-page .mentor-card .mentor-card-body {
   padding: 1.2rem 1rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
