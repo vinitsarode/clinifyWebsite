@@ -1791,12 +1791,18 @@ footer .credits a:hover {
   text-align: center;
 }
 
-#mentors-page .mentor-card .no-mentor {
+#mentors-page .mentor-card .image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+#mentors-page .mentor-card .no-mentor-strip {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(38deg);
-          transform: translate(-50%, -50%) rotate(38deg);
+  -webkit-transform: rotate(49deg);
+          transform: rotate(49deg);
+  top: -100px;
+  left: 115px;
 }
 
 #mentors-page .mentor-card .mentor-img {
@@ -1844,5 +1850,12 @@ footer .credits a:hover {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+#mentors-page .mentor-card .group-full-notice {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #f25f5c;
 }
 /*# sourceMappingURL=main.css.map */

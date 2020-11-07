@@ -1617,11 +1617,17 @@ footer {
 		height: 100%;
 		text-align: center;
 
-		.no-mentor{
+		.image-wrapper{
+			position: relative;
+			overflow: hidden;
+			height: 200px;
+		}
+
+		.no-mentor-strip{
 			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%) rotate(38deg);
+			transform: rotate(49deg);
+			top: -100px;
+			left: 115px;
 		}
 		
 		.mentor-img{
@@ -1656,6 +1662,13 @@ footer {
 			text-decoration: none;
 			align-self: center;
 			justify-self: center;
+		}
+
+		.group-full-notice{
+			margin: 0;
+			font-weight: 600;
+			font-size: 15px;
+			color: #f25f5c;
 		}
 	}
 }
