@@ -13,11 +13,11 @@ router.get('/jobs', async (req, res) => {
         const jobs3 = await getJob("FrontEnd", undefined, undefined, 1, 10)
         const jobs4 = await getJob("Backend", undefined, undefined, 1, 10)
         const jobs5 = await getJob("Python", undefined, undefined, 1, 10)
-        //console.log(jobs, jobs2)
-        jobs.items = jobs.items.concat(jobs2.items)
-        jobs.items = jobs.items.concat(jobs3.items)
-        jobs.items = jobs.items.concat(jobs4.items)
-        jobs.items = jobs.items.concat(jobs5.items)
+        //console.log(jobs2.items)
+        jobs.items = (jobs2.items?  jobs.items.concat(jobs2.items): jobs.items)
+        jobs.items = (jobs3.items?  jobs.items.concat(jobs3.items): jobs.items)
+        jobs.items = (jobs4.items?  jobs.items.concat(jobs4.items): jobs.items)
+        jobs.items = (jobs5.items?  jobs.items.concat(jobs5.items): jobs.items)
         for(var i=0; i< jobs.items.length;i++){
             var temp =''
             for(var j=0; j<jobs.items[i].locations.length && j!=4; j++){
